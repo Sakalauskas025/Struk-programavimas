@@ -1,0 +1,11 @@
+# ninja log v6
+2	290	7478828912500302	CMakeFiles/4_programele.dir/main.cpp.obj	6e3ba4c8193d9ace
+291	344	7478828915390989	4_programele.exe	f891e6ed7e495765
+5	268	7478832589838849	CMakeFiles/4_programele.dir/main.cpp.obj	6e3ba4c8193d9ace
+269	332	7478832592478871	4_programele.exe	f891e6ed7e495765
+6	275	7478836502504608	CMakeFiles/4_programele.dir/main.cpp.obj	6e3ba4c8193d9ace
+275	338	7478836505199386	4_programele.exe	f891e6ed7e495765
+6	239	7478839817283379	CMakeFiles/4_programele.dir/main.cpp.obj	6e3ba4c8193d9ace
+239	314	7478839819612915	4_programele.exe	f891e6ed7e495765
+4	245	7478840034280485	CMakeFiles/4_programele.dir/main.cpp.obj	6e3ba4c8193d9ace
+256	312	7478840036799198	4_programele.exe	f891e6ed7e495765

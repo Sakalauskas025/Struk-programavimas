@@ -1,0 +1,3 @@
+C:/Users/lenovo/Documents/Struk-programavimas/Bandymai/Bandymas 1/cmake-build-debug/CMakeFiles/Bandymas_1.dir
+C:/Users/lenovo/Documents/Struk-programavimas/Bandymai/Bandymas 1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/lenovo/Documents/Struk-programavimas/Bandymai/Bandymas 1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
