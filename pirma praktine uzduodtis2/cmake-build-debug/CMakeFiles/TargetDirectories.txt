@@ -1,0 +1,3 @@
+C:/Users/lenovo/Documents/Struk-programavimas/pirma praktine uzduodtis2/cmake-build-debug/CMakeFiles/pirma_praktine_uzduodtis2.dir
+C:/Users/lenovo/Documents/Struk-programavimas/pirma praktine uzduodtis2/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/lenovo/Documents/Struk-programavimas/pirma praktine uzduodtis2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
