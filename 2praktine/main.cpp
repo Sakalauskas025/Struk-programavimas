@@ -5,7 +5,7 @@
 using namespace std;
 
 bool isBalse(char raide) {
-    char balses[6] = {'a','e','i', 'y', 'o', 'u'};
+    char balses[6] = {'a', 'e', 'i', 'y', 'o', 'u'};
     raide = tolower(raide);
     for (int i = 0; i < 6; i++) {
         if (raide == balses[i]) {
@@ -24,23 +24,33 @@ int rastiDidziausiaDalikli(int skaicius1, int skaicius2) {
     return skaicius1;
 }
 
-
 int randomskaiciaussukurimas() {
     srand(time(NULL));
     int randomNumber = rand() % 100 + 1;
     return randomNumber;
 }
 
+void FizzBuzz(int skaiciukas) {
+    for (int i = 1; i <= skaiciukas; i++) {
+        if (i % 3 == 0 && i % 5 == 0) {
+            cout << "FizzBuzz" << endl;
+        } else if (i % 3 == 0) {
+            cout << "Fizz" << endl;
+        } else if (i % 5 == 0) {
+            cout << "Buzz" << endl;
+        }
+    }
+}
 
 int main() {
     int meniu = 0;
     while (meniu != 5) {
         cout << "Pasirinkite norima funkcija:" << endl;
-        cout << "1. Bales radimas" << endl;
-        cout << "2. Didziausio bendro daliklio radimas" << endl;
-        cout << "3. Mini zaidimas" << endl;
-        cout << "4. Nuo iki n" << endl;
-        cout << "5. Baigti programa" << endl;
+        cout << "1. Bales radimas." << endl;
+        cout << "2. Didziausio bendro daliklio radimas." << endl;
+        cout << "3. Mini zaidimas." << endl;
+        cout << "4. Nuo iki n." << endl;
+        cout << "5. Baigti programa." << endl;
         cin >> meniu;
 
         switch (meniu) {
@@ -62,33 +72,46 @@ int main() {
                 cout << "Didziausias bendras daliklis: "
                      << rastiDidziausiaDalikli(skaicius1, skaicius2) << endl;
                 break;
-        }
-            case 3:{
+            }
+            case 3: {
                 int rndSkaicius = randomskaiciaussukurimas();
-                cout << rndSkaicius << endl;
+                cout << "Atsitiktinis skaicius sukurtas: " << rndSkaicius << endl;
                 bool answered = false;
-                while (answered == false) {
+                while (!answered) {
                     int number;
-                    cout<<"Spekite skaiciu: "<<endl;
-                    cin>>number;
+                    cout << "Spekite skaiciu: " << endl;
+                    cin >> number;
                     if (number == rndSkaicius) {
-                        cout<<"Atspejote skaiciu! Skaicius buvo: "<<rndSkaicius<<endl;
+                        cout << "Atspejote skaiciu! Skaicius buvo: " << rndSkaicius << endl;
                         answered = true;
-                    }
-                    else if(number > rndSkaicius) {
-                        cout<<"Jusu skaicius didesnis uz random skaiciu"<<endl;
-                    }
-                    else {
-                        cout<<"Jusu skaicius mazesnis uz random skaiciu"<<endl;
+                    } else if (number > rndSkaicius) {
+                        cout << "Jusu skaicius didesnis uz random skaiciu" << endl;
+                    } else {
+                        cout << "Jusu skaicius mazesnis uz random skaiciu" << endl;
                     }
                 }
-                case 4: {
-
+                break;
+            }
+            case 4: {
+                cout << "Iveskite norima teigiama skaiciu: " << endl;
+                int skaiciukas;
+                cin >> skaiciukas;
+                if (skaiciukas > 0) {
+                    FizzBuzz(skaiciukas);
+                } else {
+                    cout << "Skaicius netinkamas arba lygus 0" << endl;
                 }
-
-
-
+                break;
+            }
+            case 5: {
+                cout << "Programa baigiama..." << endl;
+                break;
+            }
+            default: {
+                cout << "Pasirinkimas netinkamas, prasome pasirinkti is naujo." << endl;
+                break;
             }
         }
     }
+    return 0;
 }
