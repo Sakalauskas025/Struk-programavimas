@@ -33,11 +33,14 @@ int randomskaiciaussukurimas() {
 void FizzBuzz(int skaiciukas) {
     for (int i = 1; i <= skaiciukas; i++) {
         if (i % 3 == 0 && i % 5 == 0) {
-            cout << "FizzBuzz" << endl;
+            cout << i <<" FizzBuzz" << endl;
         } else if (i % 3 == 0) {
-            cout << "Fizz" << endl;
+            cout << i <<" Fizz" << endl;
         } else if (i % 5 == 0) {
-            cout << "Buzz" << endl;
+            cout << i << " Buzz" << endl;
+        }
+        else {
+            cout << i << endl;
         }
     }
 }
