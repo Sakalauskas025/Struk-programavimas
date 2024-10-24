@@ -51,6 +51,7 @@ int main() {
         cout << "3. Mini zaidimas." << endl;
         cout << "4. Nuo iki n." << endl;
         cout << "5. Baigti programa." << endl;
+        cout << "Iveskite savo pasirinkima:" << endl;
         cin >> meniu;
 
         switch (meniu) {
@@ -75,7 +76,7 @@ int main() {
             }
             case 3: {
                 int rndSkaicius = randomskaiciaussukurimas();
-                cout << "Atsitiktinis skaicius sukurtas: " << rndSkaicius << endl;
+                cout << "Atsitiktinis skaicius sukurtas: " << endl;
                 bool answered = false;
                 while (!answered) {
                     int number;
