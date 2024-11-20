@@ -8,7 +8,7 @@ int main() {
     char rezultatas[50];
     char uzsifruotasTekstas[50];
     char desifruotasTekstas[50];
-    int poslinkis, tekstoIlgis, rezultatoIndeksas, k = 0, l = 0;
+    int poslinkis, tekstoIlgis, k = 0, l = 0;
     int uzsifruotoTekstoIlgis;
     int pasirinkimas =0;
     while(pasirinkimas != 3) {
@@ -41,10 +41,10 @@ int main() {
             }
 
             rezultatas[k] = '\0';
+            strcpy(uzsifruotasTekstas, rezultatas);
             cout << "Uzsifruotas tekstas: " << uzsifruotasTekstas << endl;
             break;
-            case 2:cout<<"Iveskite uzsifruota zodi: "<<endl;
-            cin>>uzsifruotasTekstas;
+            case 2:
             uzsifruotoTekstoIlgis = strlen(uzsifruotasTekstas);
             for(int i = 0; i < uzsifruotoTekstoIlgis; i++) {
                 for(int j=0; j < sizeof(ABECELE); j++) {
@@ -62,6 +62,9 @@ int main() {
             break;
             case 3:cout<<"Programa baigta."<<endl;
         }
-        return 0;
     }
+    return 0;{}
 }
+
+
+
