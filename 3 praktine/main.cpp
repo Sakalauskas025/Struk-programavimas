@@ -44,27 +44,8 @@ int main() {
             strcpy(uzsifruotasTekstas, rezultatas);
             cout << "Uzsifruotas tekstas: " << uzsifruotasTekstas << endl;
             break;
-            case 2:
-            uzsifruotoTekstoIlgis = strlen(uzsifruotasTekstas);
-            for(int i = 0; i < uzsifruotoTekstoIlgis; i++) {
-                for(int j=0; j < sizeof(ABECELE); j++) {
-                    if(toupper(uzsifruotasTekstas[i]) == ABECELE[j]) {
-                        int rezultatoIndeksas = (j - poslinkis + sizeof(ABECELE)) % sizeof(ABECELE);
-                        desifruotasTekstas[l] = ABECELE[rezultatoIndeksas];
-                        l++;
-                        break;
-                    }
-                }
-            }
-            desifruotasTekstas[l] = '\0';
-            cout << "Desiratota tekstas: " <<desifruotasTekstas <<endl;
-
-            break;
-            case 3:cout<<"Programa baigta."<<endl;
         }
     }
-    return 0;{}
 }
-
 
 
