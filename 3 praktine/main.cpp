@@ -1,70 +1,155 @@
 #include <iostream>
-#include <fstream>
 #include <cstring>
 using namespace std;
-const char ABECELE[26] = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
-int main() {
-    char tekstas[50];
-    char rezultatas[50];
-    char uzsifruotasTekstas[50];
-    char desifruotasTekstas[50];
-    int poslinkis, tekstoIlgis, k = 0, l = 0;
-    int uzsifruotoTekstoIlgis;
-    int pasirinkimas =0;
-    while(pasirinkimas != 3) {
-        cout<<"Pasirinkite norima operacija: "<<endl;
-        cout<<"1. Uzsifruoti teksta."<<endl;
-        cout<<"2. Desifruoti teksta."<<endl;
-        cout<<"3. Baigti programa."<<endl;
-        cout<<"Pasirinkite norima operacija: "<<endl;
-        cin>>pasirinkimas;
 
-        switch (pasirinkimas) {
-            case 1:
-                cout<<"Iveskite zodi: "<<endl;
-            cin>>tekstas;
+const char ALFABETAS[26] = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
 
-            cout<<"Iveskite norima poslinki(1-26): "<<endl;
-            cin>>poslinkis;
+string Kodavimas(char tekstas[], char raktas[]) {
+    int pozicijaTekste = -1, pozicijaRakte = -1, koduotaPozicija;
+    int ilgisTeksto = strlen(tekstas);
+    string laikinasRaktas = raktas;
 
-            tekstoIlgis = strlen(tekstas);
+    while (laikinasRaktas.size() < ilgisTeksto) {
+        laikinasRaktas += raktas;
+    }
 
-            for(int i = 0; i < tekstoIlgis; i++) {
-                for(int j=0; j < sizeof(ABECELE); j++) {
-                    if(toupper(tekstas[i]) == ABECELE[j]) {
-                        int rezultatoIndeksas = (j + poslinkis) % sizeof(ABECELE);
-                        rezultatas[k] = ABECELE[rezultatoIndeksas];
-                        k++;
-                        break;
-                    }
-                }
+    strcpy(raktas, laikinasRaktas.c_str());
+    char koduotas[100];
+
+    for (int i = 0; i < ilgisTeksto; i++) {
+        for (int j = 0; j < sizeof(ALFABETAS); j++) {
+            if (toupper(tekstas[i]) == ALFABETAS[j]) pozicijaTekste = j;
+            if (toupper(raktas[i]) == ALFABETAS[j]) pozicijaRakte = j;
+
+            if (pozicijaTekste != -1 && pozicijaRakte != -1) {
+                koduotaPozicija = (pozicijaTekste + pozicijaRakte) % sizeof(ALFABETAS);
+                koduotas[i] = ALFABETAS[koduotaPozicija];
+                pozicijaTekste = pozicijaRakte = -1;
             }
-
-            rezultatas[k] = '\0';
-            strcpy(uzsifruotasTekstas, rezultatas);
-            cout << "Uzsifruotas tekstas: " << uzsifruotasTekstas << endl;
-            break;
-            case 2:
-            uzsifruotoTekstoIlgis = strlen(uzsifruotasTekstas);
-            for(int i = 0; i < uzsifruotoTekstoIlgis; i++) {
-                for(int j=0; j < sizeof(ABECELE); j++) {
-                    if(toupper(uzsifruotasTekstas[i]) == ABECELE[j]) {
-                        int rezultatoIndeksas = (j - poslinkis + sizeof(ABECELE)) % sizeof(ABECELE);
-                        desifruotasTekstas[l] = ABECELE[rezultatoIndeksas];
-                        l++;
-                        break;
-                    }
-                }
-            }
-            desifruotasTekstas[l] = '\0';
-            cout << "Desiratota tekstas: " <<desifruotasTekstas <<endl;
-
-            break;
-            case 3:cout<<"Programa baigta."<<endl;
         }
     }
-    return 0;{}
+
+    return string(koduotas, ilgisTeksto);
 }
 
+string Dekodavimas(char tekstas[], char raktas[]) {
+    int pozicijaTekste = -1, pozicijaRakte = -1, originaliPozicija;
+    int ilgisTeksto = strlen(tekstas);
+    string laikinasRaktas = raktas;
 
+    while (laikinasRaktas.size() < ilgisTeksto) {
+        laikinasRaktas += raktas;
+    }
 
+    strcpy(raktas, laikinasRaktas.c_str());
+    char dekoduotas[100];
+
+    for (int i = 0; i < ilgisTeksto; i++) {
+        for (int j = 0; j < sizeof(ALFABETAS); j++) {
+            if (toupper(tekstas[i]) == ALFABETAS[j]) pozicijaTekste = j;
+            if (toupper(raktas[i]) == ALFABETAS[j]) pozicijaRakte = j;
+
+            if (pozicijaTekste != -1 && pozicijaRakte != -1) {
+                originaliPozicija = (pozicijaTekste - pozicijaRakte + sizeof(ALFABETAS)) % sizeof(ALFABETAS);
+                dekoduotas[i] = ALFABETAS[originaliPozicija];
+                pozicijaTekste = pozicijaRakte = -1;
+            }
+        }
+    }
+
+    return string(dekoduotas, ilgisTeksto);
+}
+
+string KodavimasASCII(char tekstas[], char raktas[]) {
+    const int ASCII_MIN = 33, ASCII_MAX = 126;
+    const int ASCII_RANGE = ASCII_MAX - ASCII_MIN + 1;
+    int pozicijaTekste = -1, pozicijaRakte = -1, koduotaPozicija;
+    int ilgisTeksto = strlen(tekstas);
+    string laikinasRaktas = raktas;
+
+    while (laikinasRaktas.size() < ilgisTeksto) {
+        laikinasRaktas += raktas;
+    }
+
+    strcpy(raktas, laikinasRaktas.c_str());
+    char koduotas[100];
+
+    for (int i = 0; i < ilgisTeksto; i++) {
+        for (int j = ASCII_MIN; j <= ASCII_MAX; j++) {
+            if (tekstas[i] == j) pozicijaTekste = j;
+            if (raktas[i] == j) pozicijaRakte = j;
+
+            if (pozicijaTekste != -1 && pozicijaRakte != -1) {
+                koduotaPozicija = ((pozicijaTekste - ASCII_MIN) + (pozicijaRakte - ASCII_MIN)) % ASCII_RANGE + ASCII_MIN;
+                koduotas[i] = koduotaPozicija;
+                pozicijaTekste = pozicijaRakte = -1;
+            }
+        }
+    }
+
+    return string(koduotas, ilgisTeksto);
+}
+
+string DekodavimasASCII(char tekstas[], char raktas[]) {
+    const int ASCII_MIN = 33, ASCII_MAX = 126;
+    const int ASCII_RANGE = ASCII_MAX - ASCII_MIN + 1;
+    int pozicijaTekste = -1, pozicijaRakte = -1, originaliPozicija;
+    int ilgisTeksto = strlen(tekstas);
+    string laikinasRaktas = raktas;
+
+    while (laikinasRaktas.size() < ilgisTeksto) {
+        laikinasRaktas += raktas;
+    }
+
+    strcpy(raktas, laikinasRaktas.c_str());
+    char dekoduotas[100];
+
+    for (int i = 0; i < ilgisTeksto; i++) {
+        for (int j = ASCII_MIN; j <= ASCII_MAX; j++) {
+            if (tekstas[i] == j) pozicijaTekste = j;
+            if (raktas[i] == j) pozicijaRakte = j;
+
+            if (pozicijaTekste != -1 && pozicijaRakte != -1) {
+                originaliPozicija = ((pozicijaTekste - ASCII_MIN) - (pozicijaRakte - ASCII_MIN) + ASCII_RANGE) % ASCII_RANGE + ASCII_MIN;
+                dekoduotas[i] = originaliPozicija;
+                pozicijaTekste = pozicijaRakte = -1;
+            }
+        }
+    }
+
+    return string(dekoduotas, ilgisTeksto);
+}
+
+int main() {
+    int pasirinkimas;
+    char tekstas[100], raktas[100];
+    string rezultatas;
+
+    do {
+        cout << "Pasirinkite operacija:\n"
+             << "1. Kodavimas/Dekodavimas su abecele\n"
+             << "2. Kodavimas/Dekodavimas su ASCII\n"
+             << "3. Iseiti\n";
+        cin >> pasirinkimas;
+
+        if (pasirinkimas == 1 || pasirinkimas == 2) {
+            int veiksmas;
+            cout << "Pasirinkite:\n1. Kodavimas\n2. Dekodavimas\n";
+            cin >> veiksmas;
+
+            cout << "Irasykite teksta: ";
+            cin >> tekstas;
+            cout << "Irasykite rakta: ";
+            cin >> raktas;
+
+            if (pasirinkimas == 1) {
+                rezultatas = (veiksmas == 1) ? Kodavimas(tekstas, raktas) : Dekodavimas(tekstas, raktas);
+            } else {
+                rezultatas = (veiksmas == 1) ? KodavimasASCII(tekstas, raktas) : DekodavimasASCII(tekstas, raktas);
+            }
+            cout << "Rezultatas: " << rezultatas << endl;
+        }
+    } while (pasirinkimas != 3);
+
+    return 0;
+}
