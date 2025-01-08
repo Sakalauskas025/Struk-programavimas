@@ -60,7 +60,6 @@ int main() {
     float PVM = 0.21f;
     float sumaSuMokesciais = bendraSuma * (1 + PVM);
 
-    ofile << sumaSuMokesciais << endl;
 
     ofile << "Bendra suma: " << bendraSuma << " Eur" << endl;
     ofile << "Bendra suma su PVM (21%): " << sumaSuMokesciais << " Eur" << endl;
