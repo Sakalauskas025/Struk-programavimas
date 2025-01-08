@@ -60,6 +60,8 @@ int main() {
     float PVM = 0.21f;
     float sumaSuMokesciais = bendraSuma * (1 + PVM);
 
+    cout << fixed << setprecision(2);
+    ofile << fixed << setprecision(2);
 
     ofile << "Bendra suma: " << bendraSuma << " Eur" << endl;
     ofile << "Bendra suma su PVM (21%): " << sumaSuMokesciais << " Eur" << endl;
