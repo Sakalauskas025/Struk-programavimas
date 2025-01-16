@@ -1,0 +1,3 @@
+C:/Users/lenovo/Documents/Struk-programavimas/darbassu sk/cmake-build-debug/CMakeFiles/darbassu_sk.dir
+C:/Users/lenovo/Documents/Struk-programavimas/darbassu sk/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/lenovo/Documents/Struk-programavimas/darbassu sk/cmake-build-debug/CMakeFiles/rebuild_cache.dir

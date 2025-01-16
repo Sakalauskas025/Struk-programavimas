@@ -1,0 +1,27 @@
+# ninja log v6
+2	434	7545002990669964	CMakeFiles/darbassu_sk.dir/main.cpp.obj	eeb63f3d5d55e5ce
+446	553	7545002995106057	darbassu_sk.exe	52e0ce6dbcc4ccac
+8	428	7545003268274336	CMakeFiles/darbassu_sk.dir/main.cpp.obj	eeb63f3d5d55e5ce
+428	529	7545003272483359	darbassu_sk.exe	52e0ce6dbcc4ccac
+7	354	7545003798016832	CMakeFiles/darbassu_sk.dir/main.cpp.obj	eeb63f3d5d55e5ce
+355	452	7545003801493444	darbassu_sk.exe	52e0ce6dbcc4ccac
+8	379	7545003938964957	CMakeFiles/darbassu_sk.dir/main.cpp.obj	eeb63f3d5d55e5ce
+380	472	7545003942681838	darbassu_sk.exe	52e0ce6dbcc4ccac
+6	467	7545005618380494	CMakeFiles/darbassu_sk.dir/main.cpp.obj	eeb63f3d5d55e5ce
+478	586	7545005623091703	darbassu_sk.exe	52e0ce6dbcc4ccac
+9	557	7545005914606137	CMakeFiles/darbassu_sk.dir/main.cpp.obj	eeb63f3d5d55e5ce
+558	726	7545005920096765	darbassu_sk.exe	52e0ce6dbcc4ccac
+6	621	7545006264023733	CMakeFiles/darbassu_sk.dir/main.cpp.obj	eeb63f3d5d55e5ce
+621	794	7545006270176210	darbassu_sk.exe	52e0ce6dbcc4ccac
+7	343	7545007611934908	CMakeFiles/darbassu_sk.dir/main.cpp.obj	eeb63f3d5d55e5ce
+344	426	7545007615298667	darbassu_sk.exe	52e0ce6dbcc4ccac
+5	292	7545010891413407	CMakeFiles/darbassu_sk.dir/main.cpp.obj	eeb63f3d5d55e5ce
+292	362	7545010894275007	darbassu_sk.exe	52e0ce6dbcc4ccac
+5	340	7545013296775311	CMakeFiles/darbassu_sk.dir/main.cpp.obj	eeb63f3d5d55e5ce
+340	419	7545013300125397	darbassu_sk.exe	52e0ce6dbcc4ccac
+6	311	7545021458479329	CMakeFiles/darbassu_sk.dir/main.cpp.obj	eeb63f3d5d55e5ce
+311	396	7545021461525010	darbassu_sk.exe	52e0ce6dbcc4ccac
+6	319	7545022068902663	CMakeFiles/darbassu_sk.dir/main.cpp.obj	eeb63f3d5d55e5ce
+319	397	7545022072031858	darbassu_sk.exe	52e0ce6dbcc4ccac
+6	323	7545024920611446	CMakeFiles/darbassu_sk.dir/main.cpp.obj	eeb63f3d5d55e5ce
+323	412	7545024923774543	darbassu_sk.exe	52e0ce6dbcc4ccac

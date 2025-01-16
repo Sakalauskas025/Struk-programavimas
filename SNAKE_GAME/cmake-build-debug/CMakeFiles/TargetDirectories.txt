@@ -1,0 +1,3 @@
+C:/Users/lenovo/Documents/Struk-programavimas/SNAKE_GAME/cmake-build-debug/CMakeFiles/SNAKE_GAME.dir
+C:/Users/lenovo/Documents/Struk-programavimas/SNAKE_GAME/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/lenovo/Documents/Struk-programavimas/SNAKE_GAME/cmake-build-debug/CMakeFiles/rebuild_cache.dir

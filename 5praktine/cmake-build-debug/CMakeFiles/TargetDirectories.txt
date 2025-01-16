@@ -1,0 +1,3 @@
+C:/Users/lenovo/Documents/Struk-programavimas/5praktine/cmake-build-debug/CMakeFiles/5praktine.dir
+C:/Users/lenovo/Documents/Struk-programavimas/5praktine/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/lenovo/Documents/Struk-programavimas/5praktine/cmake-build-debug/CMakeFiles/rebuild_cache.dir

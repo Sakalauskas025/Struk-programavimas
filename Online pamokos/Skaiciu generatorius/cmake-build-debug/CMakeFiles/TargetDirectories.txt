@@ -1,0 +1,3 @@
+C:/Users/lenovo/Documents/Struk-programavimas/Online pamokos/Skaiciu generatorius/cmake-build-debug/CMakeFiles/Skaiciu_generatorius.dir
+C:/Users/lenovo/Documents/Struk-programavimas/Online pamokos/Skaiciu generatorius/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/lenovo/Documents/Struk-programavimas/Online pamokos/Skaiciu generatorius/cmake-build-debug/CMakeFiles/rebuild_cache.dir
